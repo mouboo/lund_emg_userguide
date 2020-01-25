@@ -76,6 +76,27 @@ rectangle, inner sep=15pt, inner ysep=15pt]
 	\end{center}	
 }
 
+%\siffrastreckcirkel{siffra}{x}{y}{storlek cirkel}{x}{y}
+\newcommand{\siffrastreckcirkel}[6]{
+	\node[mycolor1, thick] (A) at  ({#2},{#3}) {\Large {#1}};
+	\node[circle, draw, mycolor1, thick, minimum size=#4cm] (B) at  ({#5},{#6}) {};
+	\draw[mycolor1, thick] (A) -- (B);
+}
+
+% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+\newcommand{\siffrastreckellips}[7]{
+	\node[mycolor1, thick] (A) at  ({#2},{#3}) {\LARGE {#1}};
+	\node[ellipse, draw, mycolor1,thick,minimum height=#5cm,minimum width=#4cm,draw] (B) at  ({#6},{#7}) {};
+\draw[mycolor1, thick] (A) -- (B);
+}
+
+% \siffrapil{siffra}{från x}{från y}{till x}{till y}
+\newcommand{\siffrapil}[5]{
+	\node[mycolor1, thick] (A) at  (#2,#3) {\LARGE #1};
+	\node (B) at  (#4,#5) {};
+\draw[-Stealth, mycolor1, line width=1pt] (A)--(B);
+}
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,8 +137,7 @@ Utrustningen som användes och beskrivs här är MegaWin 3.01b mjukvara med ????
 
 Vårt arbete fokuserade på att få fram medelamplitud under en definierad tid i olika muskler samtidigt, och användarguiden är därför inriktad för det ändamålet. Detta är inte är en allomfattande manual, utan ett exempel på hur utrustningen kan användas. Det är mycket möjligt att det finns bättre och smidigare sätt, och det finns många andra ändamål som inte kommer att beskrivas här.
 
-All text och bilder är tillgängliga under Creative Commons 0 (CC0), vilket i princip innebär att vem som helst har rätt att göra vad som helst med innehållet.
-Källkoden är skriven i \LaTeX{} och finns att hitta tillsammans med bilderna på \verb|http://www.github.com/mouboo/lund_emg_userguide|. Om du upptäcker fel eller vill bygga vidare på denna guide är du mycket välkommen att göra så, kontakta mig på \verb|peterkvillegård@gmail.com| för mer information om detta.
+All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket lite förenklat innebär att vem som helst har rätt att göra vad som helst med innehållet. Du får använda, modifiera, och distribuera materialet utan begränsningar och utan krav på att attribuera mig. Källkoden är skriven i \LaTeX{} och finns att hitta tillsammans med bilderna på \verb|http://www.github.com/mouboo/lund_emg_userguide|. Om du upptäcker fel eller vill bygga vidare på denna guide är du mycket välkommen att göra så, kontakta mig på \verb|peterkvillegård@gmail.com| för mer information om detta.
 
 \newpage
 
@@ -165,20 +185,14 @@ Källkoden är skriven i \LaTeX{} och finns att hitta tillsammans med bilderna p
 	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.5\textwidth]{./img/login}};
 	\begin{scope}[x={(image.south east)},y={(image.north west)}]
 	
-	%Cirkel med streck och referens 1
-	\node[mycolor1, thick] (A) at  (0.2,0.1) {\Large 1};
-	\node[circle, draw, mycolor1, thick, minimum size=0.5cm] (B) at  (0.03,0.22) {};
-	\draw[mycolor1, thick] (A) -- (B);
+	%\siffrastreckcirkel{siffra}{x}{y}{storlek cirkel}{x}{y}
+	\siffrastreckcirkel{1}{0.2}{0.1}{0.5}{0.03}{0.22}	
 
-	%Cirkel med streck och referens 2
-	\node[mycolor1, thick] (A) at  (0.5,0.6) {\Large 2};
-	\node[circle, draw, mycolor1, thick, minimum size=1.2cm] (B) at  (0.22,0.43) {};
-	\draw[mycolor1, thick] (A) -- (B);
-	
-	%Cirkel med streck och referens 3
-	\node[mycolor1, thick] (A) at  (0.6,0.25) {\Large 3};
-	\node[circle, draw, mycolor1, thick, minimum size=0.8cm] (B) at  (0.39,0.1) {};
-	\draw[mycolor1, thick] (A) -- (B);
+	%\siffrastreckcirkel{siffra}{x}{y}{storlek cirkel}{x}{y}
+	\siffrastreckcirkel{2}{0.5}{0.6}{1.2}{0.22}{0.43}
+		
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+	\siffrastreckellips{3}{0.6}{0.25}{1.5}{0.5}{0.39}{0.1}
 
 	\end{scope}
 \end{tikzpicture}
@@ -208,10 +222,8 @@ Källkoden är skriven i \LaTeX{} och finns att hitta tillsammans med bilderna p
 	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.91\textwidth]{./img/3}};
 	\begin{scope}[x={(image.south east)},y={(image.north west)}]
 		
-	%Cirkel med streck och referens
-	\node[mycolor1, thick] (A) at  (0.2,0.6) {\Large 1};
-	\node[circle, draw, mycolor1, thick, minimum size=2cm] (B) at  (0.32,0.85) {};
-	\draw[mycolor1, thick] (A) -- (B);
+	%\siffrastreckcirkel{siffra}{x}{y}{storlek cirkel}{x}{y}
+	\siffrastreckcirkel{1}{0.25}{0.65}{2}{0.32}{0.85}
 
 	\end{scope}
 \end{tikzpicture}
@@ -221,7 +233,7 @@ Källkoden är skriven i \LaTeX{} och finns att hitta tillsammans med bilderna p
 
 %%%%% Kommentarboxen
 \kommentarbox{
-	Paragraf som förklarar vad som händer i detta stycke. Det är möjligtvis lite längre, för att få kontext vad som händer, och för att kunna förstå vad man gör. Detta möjliggör att man kan ta egna vägar senare och experimentera med funktionaliteten i programmet.
+	Du behöver bara skapa protokoll en gång, detta kan sedan användas för alla kommande mätningar.
 }
 \newpage
 
@@ -245,11 +257,8 @@ Källkoden är skriven i \LaTeX{} och finns att hitta tillsammans med bilderna p
 	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/7}};
 	\begin{scope}[x={(image.south east)},y={(image.north west)}]
 	
-	%Cirkel med streck och referens
-	\node[mycolor1, thick] (A) at  (0.75,0.75) {\Large 1};
-	\node[circle, draw, mycolor1, thick, minimum size=1cm] (B) 
-	at  (0.92,0.7) {};
-	\draw[mycolor1, thick] (A) -- (B);
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+	\siffrastreckellips{1}{0.75}{0.75}{1.5}{0.6}{0.92}{0.695}
 	
 	\end{scope}
 	\end{tikzpicture}
@@ -259,7 +268,7 @@ Källkoden är skriven i \LaTeX{} och finns att hitta tillsammans med bilderna p
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% II. Skapa protokoll | Steg 2/?
+%%% II. Skapa protokoll | Steg 3/?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%% Title
@@ -268,8 +277,8 @@ Källkoden är skriven i \LaTeX{} och finns att hitta tillsammans med bilderna p
 %%%%% Instruktioner
 \begin{instructionsenv}
 	\instruction{1}{Fyll i protokollets namn}
-	\instruction{1}{Välj ``Advanced protocol''}
-	\instruction{1}{Klicka på ``Next''}
+	\instruction{2}{Välj ``Advanced protocol''}
+	\instruction{3}{Klicka på ``Next''}
 \end{instructionsenv}
 
 \vspace{50pt}
@@ -280,21 +289,14 @@ Källkoden är skriven i \LaTeX{} och finns att hitta tillsammans med bilderna p
 	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/8}};
 	\begin{scope}[x={(image.south east)},y={(image.north west)}]
 	
-	%Cirkel med streck och referens 1
-	\node[mycolor1, thick] (A) at  (0.55,0.7) {\Large 1};
-	\node[circle, draw, mycolor1, thick, minimum size=1cm] (B) 
-	at  (0.25,0.8) {};
-	\draw[mycolor1, thick] (A) -- (B);
+	%\siffrastreckcirkel{siffra}{x}{y}{storlek cirkel}{x}{y}	
+	\siffrastreckcirkel{1}{0.55}{0.7}{1}{0.25}{0.8}
 	
-	%Ellips med streck och referens 2
-	\node[mycolor1, thick] (A) at  (0.5,0.55) {\LARGE 2};
-	\node[ellipse, draw, mycolor1,thick,minimum height=0.9cm,minimum width=3.5cm,draw] (B) at  (0.15,0.565) {};
-	\draw[mycolor1, thick] (A) -- (B);
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+	\siffrastreckellips{2}{0.5}{0.55}{3.5}{0.8}{0.15}{0.565}
 	
-	%Ellips med streck och referens 2
-	\node[mycolor1, thick] (A) at  (0.5,0.3) {\LARGE 3};
-	\node[ellipse, draw, mycolor1,thick,minimum height=0.7cm,minimum width=2.5cm,draw] (B) at  (0.495,0.037) {};
-	\draw[mycolor1, thick] (A) -- (B);
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+	\siffrastreckellips{3}{0.5}{0.15}{2.5}{0.7}{0.495}{0.037}
 		
 	\end{scope}
 	\end{tikzpicture}
@@ -306,5 +308,162 @@ Källkoden är skriven i \LaTeX{} och finns att hitta tillsammans med bilderna p
 	I denna guide har jag valt att kalla protokollet ``ledare'', döp gärna ert protokoll till något unikt som ni kommer ihåg, exempelvis försöksledarnas initialer.
 }
 \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% II. Skapa protokoll | Steg 4/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Title
+\pagetitle{II. Skapa protokoll}{Steg 4/?}
+
+%%%%% Instruktioner
+\begin{instructionsenv}
+	\instruction{1}{Välj ``ME6000-T16''}
+	\instruction{2}{Klicka på ``Next''}
+\end{instructionsenv}
+
+\vspace{50pt}
+
+%%%%% Bilden
+\begin{center}
+	\begin{tikzpicture}
+	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/9}};
+	\begin{scope}[x={(image.south east)},y={(image.north west)}]
+	
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+	\siffrastreckellips{1}{0.55}{0.8}{2}{0.4}{0.2}{0.805}
+	
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+	\siffrastreckellips{2}{0.5}{0.15}{2.5}{0.7}{0.495}{0.037}
+	
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+
+\vspace{35pt}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% II. Skapa protokoll | Steg 5/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Title
+\pagetitle{II. Skapa protokoll}{Steg 5/?}
+
+%%%%% Instruktioner
+\begin{instructionsenv}
+	\instruction{1}{Välj ``General body'', eller annat alternativ}
+	\instruction{2}{Klicka på ``Next''}
+\end{instructionsenv}
+
+\vspace{50pt}
+
+%%%%% Bilden
+\begin{center}
+	\begin{tikzpicture}
+	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/10}};
+	\begin{scope}[x={(image.south east)},y={(image.north west)}]
+	
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+	\siffrastreckellips{1}{0.5}{0.72}{4.5}{1.5}{0.22}{0.73}
+	
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+	\siffrastreckellips{2}{0.5}{0.15}{2.5}{0.7}{0.495}{0.037}
+	
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+
+\vspace{35pt}
+
+%%%%% Kommentarboxen
+\kommentarbox{
+	Du kan även välja att begränsa vilka muskler som ska visas genom att välja ett annat alternativ. Vi hittade inget sätt att skapa ett protokoll som använder muskler från olika kategorier här, därför rekommenderar vi att välja ``General body'', eller den kategorin som passar bäst för ert experiment, och vid behov lägga till muskler som saknas i kommande steg.
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% II. Skapa protokoll | Steg 6/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Title
+\pagetitle{II. Skapa protokoll}{Steg 6/?}
+
+%%%%% Instruktioner
+\begin{instructionsenv}
+	\instruction{1}{Markera första kanalen}
+	\instruction{2}{Klicka på ``Select source...''}
+\end{instructionsenv}
+
+\vspace{50pt}
+
+%%%%% Bilden
+\begin{center}
+	\begin{tikzpicture}
+	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/11}};
+	\begin{scope}[x={(image.south east)},y={(image.north west)}]
+	
+	% \siffrapil{siffra}{från x}{från y}{till x}{till y}
+	\siffrapil{1}{0.2}{0.79}{0.6}{0.79}
+	
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+	\siffrastreckellips{2}{0.2}{0.67}{3}{1}{0.2}{0.53}
+	
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+
+\vspace{35pt}
+
+%%%%% Kommentarboxen
+\kommentarbox{
+	Kanalerna motsvarar samma ordning som sladdarna är märkta. ME6000-T16 har 4 ingångar som vardera kan ha 4 kanaler. 
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% II. Skapa protokoll | Steg 7/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Title
+\pagetitle{II. Skapa protokoll}{Steg 7/?}
+
+%%%%% Instruktioner
+\begin{instructionsenv}
+	\instruction{1}{Välj muskeln är på höger eller vänster sida}
+	\instruction{2}{Markera rätt muskel}
+	\instruction{3}{Klicka på ``OK''}
+\end{instructionsenv}
+
+\vspace{50pt}
+
+%%%%% Bilden
+\begin{center}
+	\begin{tikzpicture}
+	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/12}};
+	\begin{scope}[x={(image.south east)},y={(image.north west)}]
+	
+	% \siffrapil{siffra}{från x}{från y}{till x}{till y}
+	\siffrapil{1}{0.2}{0.79}{0.6}{0.79}
+	
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+	\siffrastreckellips{2}{0.2}{0.67}{3}{1}{0.2}{0.53}
+	
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+
+\vspace{35pt}
+
+%%%%% Kommentarboxen
+\kommentarbox{
+	Kanalerna motsvarar samma ordning som sladdarna är märkta. ME6000-T16 har 4 ingångar som vardera kan ha 4 kanaler. 
+}
+
+\newpage
+
 
 \end{document}
