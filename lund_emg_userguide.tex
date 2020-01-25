@@ -76,6 +76,20 @@ rectangle, inner sep=15pt, inner ysep=15pt]
 	\end{center}	
 }
 
+%\begin{bild}{fil}{storlek andel av linewidth}
+%\end{bild}
+\newenvironment{bild}[2]
+{
+\begin{center}
+	\begin{tikzpicture}
+	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=#2\textwidth]{./img/#1}};
+	\begin{scope}[x={(image.south east)},y={(image.north west)}]
+}
+{		
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+}
 %\siffrastreckcirkel{siffra}{x}{y}{storlek cirkel}{x}{y}
 \newcommand{\siffrastreckcirkel}[6]{
 	\node[mycolor1, thick] (A) at  ({#2},{#3}) {\Large {#1}};
@@ -180,23 +194,16 @@ All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket 
 \vspace{50pt}
 
 %%%%% Bilden
-\begin{center}
-	\begin{tikzpicture}
-	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.5\textwidth]{./img/login}};
-	\begin{scope}[x={(image.south east)},y={(image.north west)}]
-	
+\begin{bild}{login}{0.5}
 	%\siffrastreckcirkel{siffra}{x}{y}{storlek cirkel}{x}{y}
 	\siffrastreckcirkel{1}{0.2}{0.1}{0.5}{0.03}{0.22}	
 
 	%\siffrastreckcirkel{siffra}{x}{y}{storlek cirkel}{x}{y}
 	\siffrastreckcirkel{2}{0.5}{0.6}{1.2}{0.22}{0.43}
-		
-	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
-	\siffrastreckellips{3}{0.6}{0.25}{1.5}{0.5}{0.39}{0.1}
 
-	\end{scope}
-\end{tikzpicture}
-\end{center}
+	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
+\siffrastreckellips{3}{0.6}{0.25}{1.5}{0.5}{0.39}{0.1}
+\end{bild}
 
 \vspace{35pt}
 
@@ -217,17 +224,10 @@ All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket 
 \vspace{50pt}
 
 %%%%% Bilden
-\begin{center}
-\begin{tikzpicture}
-	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.91\textwidth]{./img/3}};
-	\begin{scope}[x={(image.south east)},y={(image.north west)}]
-		
+\begin{bild}{3}{0.91}
 	%\siffrastreckcirkel{siffra}{x}{y}{storlek cirkel}{x}{y}
 	\siffrastreckcirkel{1}{0.25}{0.65}{2}{0.32}{0.85}
-
-	\end{scope}
-\end{tikzpicture}
-\end{center}
+\end{bild}
 
 \vspace{35pt}
 
@@ -252,17 +252,10 @@ All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket 
 \vspace{50pt}
 
 %%%%% Bilden
-\begin{center}
-	\begin{tikzpicture}
-	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/7}};
-	\begin{scope}[x={(image.south east)},y={(image.north west)}]
-	
+\begin{bild}{7}{0.8}
 	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
 	\siffrastreckellips{1}{0.75}{0.75}{1.5}{0.6}{0.92}{0.695}
-	
-	\end{scope}
-	\end{tikzpicture}
-\end{center}
+\end{bild}
 
 \vspace{35pt}
 \newpage
@@ -284,23 +277,16 @@ All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket 
 \vspace{50pt}
 
 %%%%% Bilden
-\begin{center}
-	\begin{tikzpicture}
-	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/8}};
-	\begin{scope}[x={(image.south east)},y={(image.north west)}]
-	
+\begin{bild}{8}{0.8}
 	%\siffrastreckcirkel{siffra}{x}{y}{storlek cirkel}{x}{y}	
 	\siffrastreckcirkel{1}{0.55}{0.7}{1}{0.25}{0.8}
-	
+
 	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
 	\siffrastreckellips{2}{0.5}{0.55}{3.5}{0.8}{0.15}{0.565}
-	
+
 	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
-	\siffrastreckellips{3}{0.5}{0.15}{2.5}{0.7}{0.495}{0.037}
-		
-	\end{scope}
-	\end{tikzpicture}
-\end{center}
+\siffrastreckellips{3}{0.5}{0.15}{2.5}{0.7}{0.495}{0.037}
+\end{bild}
 
 \vspace{35pt}
 %%%%% Kommentarboxen
@@ -325,20 +311,13 @@ All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket 
 \vspace{50pt}
 
 %%%%% Bilden
-\begin{center}
-	\begin{tikzpicture}
-	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/9}};
-	\begin{scope}[x={(image.south east)},y={(image.north west)}]
-	
+\begin{bild}{9}{0.8}
 	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
 	\siffrastreckellips{1}{0.55}{0.8}{2}{0.4}{0.2}{0.805}
-	
+
 	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
 	\siffrastreckellips{2}{0.5}{0.15}{2.5}{0.7}{0.495}{0.037}
-	
-	\end{scope}
-	\end{tikzpicture}
-\end{center}
+\end{bild}
 
 \vspace{35pt}
 
@@ -360,20 +339,13 @@ All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket 
 \vspace{50pt}
 
 %%%%% Bilden
-\begin{center}
-	\begin{tikzpicture}
-	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/10}};
-	\begin{scope}[x={(image.south east)},y={(image.north west)}]
-	
+\begin{bild}{10}{0.8}
 	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
 	\siffrastreckellips{1}{0.5}{0.72}{4.5}{1.5}{0.22}{0.73}
-	
+
 	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
 	\siffrastreckellips{2}{0.5}{0.15}{2.5}{0.7}{0.495}{0.037}
-	
-	\end{scope}
-	\end{tikzpicture}
-\end{center}
+\end{bild}
 
 \vspace{35pt}
 
@@ -400,20 +372,13 @@ All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket 
 \vspace{50pt}
 
 %%%%% Bilden
-\begin{center}
-	\begin{tikzpicture}
-	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/11}};
-	\begin{scope}[x={(image.south east)},y={(image.north west)}]
-	
+\begin{bild}{11}{0.8}
 	% \siffrapil{siffra}{från x}{från y}{till x}{till y}
 	\siffrapil{1}{0.2}{0.79}{0.6}{0.79}
-	
+
 	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
 	\siffrastreckellips{2}{0.2}{0.67}{3}{1}{0.2}{0.53}
-	
-	\end{scope}
-	\end{tikzpicture}
-\end{center}
+\end{bild}
 
 \vspace{35pt}
 
@@ -441,20 +406,13 @@ All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket 
 \vspace{50pt}
 
 %%%%% Bilden
-\begin{center}
-	\begin{tikzpicture}
-	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.8\textwidth]{./img/12}};
-	\begin{scope}[x={(image.south east)},y={(image.north west)}]
-	
+\begin{bild}{12}{0.8}
 	% \siffrapil{siffra}{från x}{från y}{till x}{till y}
 	\siffrapil{1}{0.2}{0.79}{0.6}{0.79}
-	
+
 	% \siffrastreckellips{siffra}{x}{y}{längd ellips}{höjd ellips}{x}{y}
 	\siffrastreckellips{2}{0.2}{0.67}{3}{1}{0.2}{0.53}
-	
-	\end{scope}
-	\end{tikzpicture}
-\end{center}
+\end{bild}
 
 \vspace{35pt}
 
@@ -464,6 +422,5 @@ All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket 
 }
 
 \newpage
-
 
 \end{document}
