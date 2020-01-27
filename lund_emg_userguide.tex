@@ -1,7 +1,7 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in]{geometry}
+\usepackage[left=2.54cm, right=1.0in, top=1.0in, bottom=1.0in]{geometry}
 \usepackage[swedish]{babel}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,shapes,calc,backgrounds}
@@ -173,7 +173,7 @@ All text och bilder är tillgängliga under Creative Commons Zero (CC0), vilket 
 \item Anslut biomonitor \dotfill 16
 \item Kontrollera signalen \dotfill 17
 \item Utför mätning \dotfill 21
-\item Bearbeta signalen \dotfill 7
+\item Bearbeta signalen \dotfill 25
 \end{enumerate}
 }
 
@@ -630,13 +630,49 @@ Utför lämpliga rörelser/kontraktioner för att se att aktivitet registreras i
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% VI. Utför mätning | Steg 1/?
+%%% VI. Utför mätning | Steg 1/4
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagetitle{VI. Utför mätning}{Steg 1/?}
+\pagetitle{VI. Utför mätning}{Steg 1/4}
 
 \begin{instructionsenv}
-	{\large Beroende på var du är i programmet, följ instruktionerna i ``Kontrollera signalen'' steg 1 och 2 tills du ser fönstret där du kan klicka på den röda cirkeln för att starta mätning.\par} 
+	\instruction{1}{Klicka på ``Measure''}
+\end{instructionsenv}
+
+\begin{bild}{3}{0.91}
+	\siffrastreckellips{1}{0.45}{0.65}{2}{2}{0.5}{0.85}
+\end{bild}
+
+\kommentarbox{
+Om du precis kontrollerat signalen så är du kanske redan inne i ``Measure''-delen av programmet och kan hoppa fram till steg 3.
+}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VI. Utför mätning | Steg 2/4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{V. Utför mätning}{Steg 2/4}
+
+\begin{instructionsenv}
+	\instruction{1}{Kontrollera att ``Protocol'' och ``Person'' stämmer}
+	\instruction{2}{Klicka på ``Run protocol''}
+\end{instructionsenv}
+
+\begin{bild}{19}{0.91}
+	\siffrastreckellips{1}{0.1}{0.7}{1.5}{1.5}{0.1}{0.92}
+	\siffrastreckellips{2}{0.29}{0.7}{2}{0.5}{0.29}{0.945}
+\end{bild}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VI. Utför mätning | Steg 3/4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Utför mätning}{Steg 3/4}
+
+\begin{instructionsenv}
 	\instruction{1}{Klicka på den röda cirkeln för att starta mätning}
 	
 \end{instructionsenv}
@@ -647,12 +683,11 @@ Utför lämpliga rörelser/kontraktioner för att se att aktivitet registreras i
 
 \newpage
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% VI. Utför mätning | Steg 2/?
+%%% VI. Utför mätning | Steg 4/4
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagetitle{VI. Utför mätning}{Steg 2/?}
+\pagetitle{VI. Utför mätning}{Steg 4/4}
 
 \begin{instructionsenv}
 	\instruction{1}{Klicka på flaggan för att placera en tidsmarkör.\par  \hspace{0.045\linewidth} Klicka fler gånger för att placera ytterligare tidsmarkörer.}
@@ -673,31 +708,164 @@ Utför lämpliga rörelser/kontraktioner för att se att aktivitet registreras i
 \end{bild}
 
 \kommentarbox{
-	I detta exempel har jag satt två flaggor för att markera start- och  stopptiden då försökspersonen utförde en viss rörelse. Om man vill kan man låta mätningen fortsätta och sätta fler flaggor vid nästa rörelse. Det gäller då att man är strukturerad så att man senare vet vad som hände mellan flagga 1 och 2, och mellan flagga 3 och 4, osv. För enkelhetens skull nöjer jag mig med två flaggor här.
+	I detta exempel har jag satt två flaggor för att markera start- och  stopptiden då försökspersonen utförde en viss rörelse. Om man vill kan man låta mätningen fortsätta och sätta fler flaggor vid nästa rörelse. Det gäller då att man är strukturerad så att man senare vet vad som hände mellan flagga 1 och 2, och mellan flagga 3 och 4, osv. För enkelhetens skull nöjer jag mig med två flaggor här.\par 
+	Du har nu utfört en mätning. Om du tänkt göra fler mätningar innan du analyserar datan, så är det en god idé att ge mätningen en kommentar som identifierar vad du precis mätt. Hur man gör detta kan du läsa i nästa kapitel.
 }
 
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% VI. Utför mätning | Steg 3/?
+%%% VII. Bearbeta signalen | Steg 1/?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagetitle{VI. Utför mätning}{Steg 3/?}
+\pagetitle{VI. Bearbeta signalen}{Steg 1/?}
 
 \begin{instructionsenv}
-	\instruction{1}{Klicka på flaggan för att placera en tidsmarkör.\par  \hspace{0.045\linewidth} Klicka fler gånger för att placera ytterligare tidsmarkörer.}
-	\instruction{2}{Klicka på den grå flaggan för att stoppa mätningen.\par  \hspace{0.045\linewidth} Om du är nöjd med mätningen, spara denna data.}
-	
+	\instruction{1}{Klicka på ``Results''}
 \end{instructionsenv}
 
-\begin{bild}{25}{0.91}
-	\siffrastreckellips{1}{0.85}{0.53}{0.6}{0.7}{0.975}{0.53}
-	\siffrastreckellips{2}{0.85}{0.7}{0.7}{0.7}{0.977}{0.77}
+\begin{bild}{3}{0.91}
+	\siffrastreckellips{1}{0.8}{0.65}{2}{2}{0.863}{0.85}
 \end{bild}
 
 \kommentarbox{
-	I detta exempel har jag satt två flaggor för att markera start- och  stopptiden då försökspersonen utförde en viss rörelse. Om man vill kan man låta mätningen fortsätta och sätta fler flaggor vid nästa rörelse. Det gäller då att man är strukturerad så att man senare vet vad som hände mellan flagga 1 och 2, och mellan flagga 3 och 4, osv. För enkelhetens skull nöjer jag mig med två flaggor här.
+	Denna sektion kommer att visa ett exempel på hur data kan bearbetas. Låt oss säga att test\-ledaren har instruerat testpersonen att utföra en isometrisk kontraktion under fem sekunder, och satt tidsmarkörer vid början och slutet av de fem sekunderna. Vi tänker oss vidare att vi ska använda data från tre sekunder i mitten av kontraktionen. Från denna data vill vi se medelaktivitet i musklerna.
 }
 
 \newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 3/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Bearbeta signalen}{Steg 3/?}
+
+\begin{instructionsenv}
+	\instruction{1}{Högerklicka på fältet under ``Comment'' och ange en kommentar}
+	\instruction{2}{Dubbelklicka på ``Raw free''}
+\end{instructionsenv}
+
+\begin{bild}{25}{0.91}
+	\siffrastreckellips{1}{0.34}{0.75}{2}{0.3}{0.34}{0.87}
+	\siffrastreckellips{2}{0.81}{0.75}{3}{0.4}{0.81}{0.897}
+\end{bild}
+
+\kommentarbox{
+	I detta fiktiva experiment tänkte jag mig att vi precis mätt första försöket av övning ett, och kallade därför denna mätning för ``Övning 1, försök 1''.\par 
+	``Raw free är den obearbetade signalen ni sparade från mätningen. I följande steg kommer vi att bearbeta signalen med tidsbegränsning, filter, rektifiering, mm. Ett antal olika snarlika fönster kommer att öppnas, och det gäller att hålla koll så att man gör rätt sak på rätt plats, och sparar rätt data.
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 4/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Bearbeta signalen}{Steg 4/?}
+
+\begin{instructionsenv}
+	\instruction{1}{Klicka ``Zoom from marker to marker''}
+\end{instructionsenv}
+
+\vspace{-20pt}
+
+\begin{bild}{26}{0.91}
+	\siffrastreckellips{1}{0.272}{1.08}{0.7}{0.7}{0.272}{0.894}
+\end{bild}
+
+\kommentarbox{
+	Här ska vi med hjälp av flaggorna välja ut vilket tidsomfång som vi är intresserade av.
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 5/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Bearbeta signalen}{Steg 5/?}
+
+\begin{instructionsenv}
+	\instruction{1}{Markera två flaggor}
+	\instruction{2}{Klicka ``Ok''}
+\end{instructionsenv}
+
+\begin{bild}{27}{0.91}
+	\siffrastreckellips{1}{0.4}{0.5}{0.9}{0.9}{0.305}{0.58}
+	\siffrastreckellips{2}{0.55}{0.37}{1.4}{0.5}{0.65}{0.22}	
+\end{bild}
+
+\kommentarbox{
+	Om ni har satt fler än två flaggor under samma mätning gäller det att ni nu minns vilka flaggor ni är intresserade av.
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 6/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Bearbeta signalen}{Steg 6/?}
+
+\begin{instructionsenv}
+	\instruction{1}{Klicka ``Edit data''}
+\end{instructionsenv}
+
+\vspace{-20pt}
+
+\begin{bild}{28}{0.91}
+	\siffrastreckellips{1}{0.502}{1.08}{0.7}{0.7}{0.502}{0.894}
+\end{bild}
+
+\kommentarbox{
+	Fönstret är nu fyllt av aktiviteten från flagga 1 till flagga 2. Tiden mellan flaggorna är ungefär 5 sekunder, vilket kan avläsas på tidsskalan nedtill. De streckade horisontella linjerna markerar sekunder.
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 7/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Bearbeta signalen}{Steg 7/?}
+
+\begin{instructionsenv}
+	\instruction{1}{Klicka ``Digital filtering''}
+\end{instructionsenv}
+
+\vspace{-20pt}
+
+\begin{bild}{29}{0.91}
+	\siffrastreckellips{1}{0.582}{1.08}{0.7}{0.7}{0.582}{0.923}
+\end{bild}
+
+\kommentarbox{
+	Vi kan börja med att applicera frekvensfilter. Här kommer jag att visa hur man filtrerar med bandpass och notch-filter.
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 8/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Bearbeta signalen}{Steg 7/?}
+
+\begin{instructionsenv}
+	\instruction{1}{Klicka ``Digital filtering''}
+	\instruction{2}{Fyll i ``Low frequency'': 15 Hz.}
+	\instruction{3}{Fyll i ``High frequency'': 400 Hz.}	
+\end{instructionsenv}
+
+\begin{bild}{30}{0.91}
+	\siffrastreckellips{1}{0.6}{0.88}{2}{0.4}{0.54}{0.746}
+	\siffrastreckellips{2}{0.66}{0.635}{1.7}{0.4}{0.53}{0.635}
+\end{bild}
+
+\kommentarbox{
+	Vi kan börja med att applicera frekvensfilter. Här kommer jag att visa hur man filtrerar med bandpass och notch-filter.
+}
+
+\newpage
+
 \end{document}
