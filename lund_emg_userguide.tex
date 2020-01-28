@@ -735,10 +735,10 @@ Om du precis kontrollerat signalen så är du kanske redan inne i ``Measure''-de
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% VII. Bearbeta signalen | Steg 3/?
+%%% VII. Bearbeta signalen | Steg 2/?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagetitle{VI. Bearbeta signalen}{Steg 3/?}
+\pagetitle{VI. Bearbeta signalen}{Steg 2/?}
 
 \begin{instructionsenv}
 	\instruction{1}{Högerklicka på fältet under ``Comment'' och ange en kommentar}
@@ -758,10 +758,10 @@ Om du precis kontrollerat signalen så är du kanske redan inne i ``Measure''-de
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% VII. Bearbeta signalen | Steg 4/?
+%%% VII. Bearbeta signalen | Steg 3/?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagetitle{VI. Bearbeta signalen}{Steg 4/?}
+\pagetitle{VI. Bearbeta signalen}{Steg 3/?}
 
 \begin{instructionsenv}
 	\instruction{1}{Klicka ``Zoom from marker to marker''}
@@ -780,10 +780,10 @@ Om du precis kontrollerat signalen så är du kanske redan inne i ``Measure''-de
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% VII. Bearbeta signalen | Steg 5/?
+%%% VII. Bearbeta signalen | Steg 4/?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagetitle{VI. Bearbeta signalen}{Steg 5/?}
+\pagetitle{VI. Bearbeta signalen}{Steg 4/?}
 
 \begin{instructionsenv}
 	\instruction{1}{Markera två flaggor}
@@ -802,10 +802,10 @@ Om du precis kontrollerat signalen så är du kanske redan inne i ``Measure''-de
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% VII. Bearbeta signalen | Steg 6/?
+%%% VII. Bearbeta signalen | Steg 5/?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagetitle{VI. Bearbeta signalen}{Steg 6/?}
+\pagetitle{VI. Bearbeta signalen}{Steg 5/?}
 
 \begin{instructionsenv}
 	\instruction{1}{Klicka ``Edit data''}
@@ -824,10 +824,10 @@ Om du precis kontrollerat signalen så är du kanske redan inne i ``Measure''-de
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% VII. Bearbeta signalen | Steg 7/?
+%%% VII. Bearbeta signalen | Steg 6/?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\pagetitle{VI. Bearbeta signalen}{Steg 7/?}
+\pagetitle{VI. Bearbeta signalen}{Steg 6/?}
 
 \begin{instructionsenv}
 	\instruction{1}{Klicka ``Digital filtering''}
@@ -846,24 +846,111 @@ Om du precis kontrollerat signalen så är du kanske redan inne i ``Measure''-de
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% VII. Bearbeta signalen | Steg 8/?
+%%% VII. Bearbeta signalen | Steg 7/?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagetitle{VI. Bearbeta signalen}{Steg 7/?}
 
 \begin{instructionsenv}
-	\instruction{1}{Klicka ``Digital filtering''}
+	\instruction{1}{Välj ``Band pass''}
 	\instruction{2}{Fyll i ``Low frequency'': 15 Hz.}
-	\instruction{3}{Fyll i ``High frequency'': 400 Hz.}	
+	\instruction{3}{Fyll i ``High frequency'': 400 Hz.}
+	\instruction{4}{Klicka ``OK''}		
 \end{instructionsenv}
 
 \begin{bild}{30}{0.91}
 	\siffrastreckellips{1}{0.6}{0.88}{2}{0.4}{0.54}{0.746}
-	\siffrastreckellips{2}{0.66}{0.635}{1.7}{0.4}{0.53}{0.635}
+	\siffrastreckellips{2}{0.67}{0.635}{1.7}{0.4}{0.53}{0.635}
+	\siffrastreckellips{3}{0.67}{0.57}{1.7}{0.4}{0.53}{0.57}
+	\siffrastreckellips{4}{0.945}{0.18}{1.5}{0.6}{0.945}{0.032}		
 \end{bild}
 
 \kommentarbox{
-	Vi kan börja med att applicera frekvensfilter. Här kommer jag att visa hur man filtrerar med bandpass och notch-filter.
+	Var noga med att välja ``Band pass'' och inte ``Band stop''.
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 8/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Bearbeta signalen}{Steg 8/?}
+
+\begin{instructionsenv}
+	\instruction{1}{Klicka ``Digital filtering'' igen} 
+\end{instructionsenv}
+
+\vspace{-20pt}
+
+\begin{bild}{29}{0.91}
+	\siffrastreckellips{1}{0.582}{1.08}{0.7}{0.7}{0.582}{0.923}
+\end{bild}
+
+\kommentarbox{
+	Vi hittade inget sätt att applicera båda filtren på en gång.
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 9/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Bearbeta signalen}{Steg 9/?}
+
+\begin{instructionsenv}
+	\instruction{1}{Välj ``Notch 50Hz''}
+	\instruction{2}{Klicka ``OK''}		
+\end{instructionsenv}
+
+\begin{bild}{32}{0.91}
+	\siffrastreckellips{1}{0.6}{0.88}{2}{0.4}{0.54}{0.746}
+	\siffrastreckellips{4}{0.945}{0.18}{1.5}{0.6}{0.945}{0.032}		
+\end{bild}
+
+\kommentarbox{
+	Standardspänningen i alla vanliga enfas vägguttag i Sverige är en växelspänning på 50 Hz.
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 10/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Bearbeta signalen}{Steg 10/?}
+
+\begin{instructionsenv}
+	\instruction{1}{Stäng fönstret. Vid ``Save changes?'', välj ``Yes'' }
+\end{instructionsenv}
+
+\vspace{-20pt}
+
+\begin{bild}{34}{0.91}
+	\siffrastreckellips{1}{0.984}{1.08}{0.4}{0.4}{0.984}{0.98}
+	\siffrastreckellips{4}{0.945}{0.18}{1.5}{0.6}{0.945}{0.032}		
+\end{bild}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 11/?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VI. Bearbeta signalen}{Steg 11/?}
+
+\begin{instructionsenv}
+	\hspace{0.045\linewidth} \parbox{0.955\linewidth}{{\large Nu har ni förmodligen en hel del fönster öppna med datan i olika stadier av bearbetning. Stäng ner dem tills ni ser fönstret nedan. Ni behöver inte spara datan från dessa fönster.}}\par 
+	\instruction{1}{Dubbelklicka på ``Edited data''}
+\end{instructionsenv}
+
+\begin{bild}{35}{0.91}
+	\siffrastreckellips{1}{0.81}{0.75}{3}{0.4}{0.81}{0.897}
+\end{bild}
+
+\kommentarbox{
+	``Edited data'' är den filtrerade datan från föregående steg. 
 }
 
 \newpage
