@@ -13,6 +13,8 @@
 \usepackage{colortbl}
 \usepackage{enumerate}
 \usepackage{enumitem}
+\usepackage{gensymb}
+\usepackage{xfrac}
 
 \setlength{\extrarowheight}{8pt}
 \renewcommand{\arraystretch}{1}
@@ -51,6 +53,18 @@ rectangle, inner sep=15pt, inner ysep=15pt]
 		\vspace{2em}
 		{\Large\bfseries{Instruktioner}}\par
 		\vspace{1em}
+	}
+	{ 
+	\end{purpleleftline}
+	\vspace{50pt}
+}
+
+% Instruction environment
+\newenvironment{bakingsenv}
+{
+	\vspace{-4pt}
+	\begin{purpleleftline}
+		\vspace{2em}
 	}
 	{ 
 	\end{purpleleftline}
@@ -136,7 +150,7 @@ rectangle, inner sep=15pt, inner ysep=15pt]
 { \huge En praktisk guide};
 
 \node[align=center,black] at (0.825\paperwidth,0.1\paperheight) 
-{\Large Peter Kvillegård \\[3em] Version 1.0 \\ 2020-01-23};
+{\Large Peter Kvillegård \\[3em] Version 1.01 \\ 2020-01-23};
 
 \end{tikzpicture}
 \restoregeometry
@@ -915,7 +929,7 @@ Om du precis kontrollerat signalen så är du kanske redan inne i ``Measure''-de
 \end{bild}
 
 \kommentarbox{
-	Standardspänningen i alla vanliga enfas vägguttag i Sverige är en växelspänning på 50 Hz.
+	50 Hz för att filtrera bort påverkan från växelspänningen från vägguttag.
 }
 
 \newpage
@@ -1077,6 +1091,83 @@ Om du precis kontrollerat signalen så är du kanske redan inne i ``Measure''-de
 \kommentarbox{
 	Välj gärna ett filnamn som är unikt för testpersonen och mätningen, i en mapp som ni sedan kan kopiera och ta med.
 }
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% VII. Bearbeta signalen | Steg 17/17
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{VII. Bearbeta signalen}{Steg 17/17}
+
+\begin{instructionsenv}
+	\instruction{1}{Ange ett lämpligt namn för filen.}
+	\instruction{2}{Klicka på ``Save''.}
+\end{instructionsenv}
+
+\begin{bild}{41}{0.91}
+	\siffrastreckellips{1}{0.3}{0.4}{4}{0.9}{0.32}{0.2}
+	\siffrastreckellips{2}{0.7}{0.4}{2.8}{0.8}{0.875}{0.2}
+\end{bild}
+
+\kommentarbox{
+	Välj gärna ett filnamn som är unikt för testpersonen och mätningen, i en mapp som ni sedan kan kopiera och ta med.
+}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Appendix A. Felsökning
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{Appendix A. Felsökning}{}
+
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Appendix B. Deltagarkompensation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagetitle{Appendix B. Deltagarkompensation}{Pumpamuffins}
+
+\begin{bakingsenv}
+	{\Large\bfseries Ingredienser}
+	\vspace{0.5em}
+	\begin{itemize}
+	\item 0.8 dl smält kokosnötolja
+	\item 1.2 dl lönnsirap eller honung
+	\item 2 st ägg
+	\item 2.4 dl pumpapuré
+	\item 0.6 dl mjölk
+	\item 2 tsk pumpakrydda (1 tsk kanel, \sfrac{1}{2} tsk ingefära, \sfrac{1}{4} tsk muskot, och \sfrac{1}{4} tsk kryddpeppar)
+	\item 1 tsk bakpulver
+	\item 1 tsk vaniljextrakt
+	\item \sfrac{1}{2} tsk salt
+	\item 4.1 dl fullkornsmjöl
+	\item 0.8 dl havregryn
+	\end{itemize}
+	\vspace{1em}
+	
+	{\Large\bfseries Instruktioner}\par 
+	\vspace{0.5em}
+	\instruction{1}{\normalsize Sätt ugnen på 165\degree C.}
+	\instruction{2}{\parbox[t]{0.95\linewidth}{\normalsize Vispa ihop olja och lönnsirap/honung i en stor skål. Tillsätt ägg och vispa väl. Tillsätt pumpapuré, mjölk, pumpakryddor, bakpulver, och vaniljextrakt och salt.}}
+	\instruction{3}{\parbox[t]{0.95\linewidth}{\normalsize Tillsätt mjöl och havregryn, rör om med en stor sked. Det är OK om det är lite klumpar kvar. Tillsätt valfria saker du vill blanda i, såsom nötter, choklad, eller torkad frukt.}}
+	\instruction{4}{\parbox[t]{0.95\linewidth}{\normalsize Häll smeten i muffinsformarna. Sprinkla havregryn och pumpakrydda på toppen. Grädda 20--25 minuter.}}
+	\instruction{5}{\parbox[t]{0.95\linewidth}{\normalsize Låt svalna.}}
+
+
+\end{bakingsenv}
+
+\begin{bild}{muffins}{0.6}
+	\siffrapil{5}{0.65}{0.9}{0.5}{0.9}
+\end{bild}
+
+%\kommentarbox{
+%	h
+%}
 
 \newpage
 
